@@ -1,6 +1,7 @@
+package models;
+
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
 
 import java.util.List;
 
@@ -10,14 +11,14 @@ public class Page {
     private int id;
     private String title;
     private String type;
-    private List<String> Chars;
+    private Chars chars;
     private Voting voting;
     private boolean isAuthorize;
 
-    public Page(String title, String type, List<String> chars, Voting voting, boolean isAuthorize) {
+    public Page(String title, String type, Chars chars, Voting voting, boolean isAuthorize) {
         this.title = title;
         this.type = type;
-        Chars = chars;
+        this.chars = chars;
         this.voting = voting;
         this.isAuthorize = isAuthorize;
     }
@@ -49,14 +50,14 @@ public class Page {
         this.type = type;
     }
     @XmlElement(name="Chars")
-    public List<String> getChars() {
-        return Chars;
+    public Chars getChars() {
+        return chars;
     }
 
-    public void setChars(List<String> chars) {
-        Chars = chars;
+    public void setChars(Chars chars) {
+        this.chars = chars;
     }
-    @XmlElement(name="Voting")
+    @XmlElement(name="Votings")
     public Voting getVoting() {
         return voting;
     }
