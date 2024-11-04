@@ -3,6 +3,7 @@ package models;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -12,19 +13,28 @@ public class Page {
     private String title;
     private String type;
     private Chars chars;
-    private Voting voting;
+    private List<Voting> votings;
     private boolean isAuthorize;
 
-    public Page(String title, String type, Chars chars, Voting voting, boolean isAuthorize) {
+    public Page(String title, String type, Chars chars, List<Voting> votings, boolean isAuthorize) {
         this.title = title;
         this.type = type;
         this.chars = chars;
-        this.voting = voting;
+        this.votings = votings;
         this.isAuthorize = isAuthorize;
     }
 
     public Page() {
+        this.votings = new ArrayList<>();
+        this.chars = new Chars();
     }
+
+    public Page(int id) {
+        this.id = id;
+        this.votings = new ArrayList<>();
+        this.chars = new Chars();
+    }
+
     @XmlAttribute(name="id")
     public int getId() {
         return id;
@@ -58,12 +68,12 @@ public class Page {
         this.chars = chars;
     }
     @XmlElement(name="Votings")
-    public Voting getVoting() {
-        return voting;
+    public List<Voting> getVotings() {
+        return votings;
     }
 
-    public void setVoting(Voting voting) {
-        this.voting = voting;
+    public void addVoting(Voting voting) {
+        this.votings.add(voting);
     }
     @XmlElement(name="Authorize")
     public boolean getIsAuthorize() {
@@ -72,5 +82,8 @@ public class Page {
 
     public void setIsAuthorize(boolean isAuthorize) {
         this.isAuthorize = isAuthorize;
+    }
+    public void addChar(Char property){
+        this.chars.addChar(property);
     }
 }
