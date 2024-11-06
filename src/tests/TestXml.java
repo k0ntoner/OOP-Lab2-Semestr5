@@ -1,5 +1,6 @@
 package tests;
 
+import configs.DomHandler;
 import configs.SaxHandler;
 import configs.XMLConfigLoader;
 import models.Site;
@@ -26,6 +27,13 @@ public class TestXml {
     @Test
     public void TestSaxParsing() throws SAXException, IOException {
         SaxHandler handler = new SaxHandler();
+        Site site = handler.parse("/Users/andriikot/IdeaProjects/OOPLab2/src/site.xml");
+        assertEquals(site!=null, true);
+    }
+
+    @Test
+    public void TestDomParsing() throws Exception{
+        DomHandler handler = new DomHandler();
         Site site = handler.parse("/Users/andriikot/IdeaProjects/OOPLab2/src/site.xml");
         assertEquals(site!=null, true);
     }
