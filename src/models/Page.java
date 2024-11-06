@@ -60,8 +60,8 @@ public class Page {
         this.type = type;
     }
     @XmlElement(name="Chars")
-    public Chars getChars() {
-        return chars;
+    public List<Char> getChars() {
+        return chars.getChars();
     }
 
     public void setChars(Chars chars) {

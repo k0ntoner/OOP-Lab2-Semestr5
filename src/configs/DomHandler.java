@@ -1,5 +1,6 @@
 package configs;
 
+import interfaces.Handler;
 import models.Char;
 import models.Page;
 import models.Site;
@@ -14,7 +15,7 @@ import java.io.File;
 
 
 
-public class DomHandler {
+public class DomHandler implements Handler {
     private Site site;
     public Site parse(String filePath) {
         try{

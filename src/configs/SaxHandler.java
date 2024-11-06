@@ -1,5 +1,6 @@
 package configs;
 
+import interfaces.Handler;
 import models.Char;
 import models.Page;
 import models.Site;
@@ -15,7 +16,7 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
 
-public class SaxHandler  {
+public class SaxHandler implements Handler {
     private Site site;
     private Page currentPage;
     private String currentValue;
