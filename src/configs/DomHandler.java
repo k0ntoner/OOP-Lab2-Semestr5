@@ -30,8 +30,9 @@ public class DomHandler implements Handler {
                 Element pageElement = (Element) pages.item(i);
                 Page page=new Page();
                 page.setId(Integer.parseInt(pageElement.getAttribute("id")));
+                page.setType(pageElement.getAttribute("type"));
                 page.setTitle(pageElement.getElementsByTagName("Title").item(0).getTextContent());
-                page.setType(pageElement.getElementsByTagName("Type").item(0).getTextContent());
+
                 NodeList chars= pageElement.getElementsByTagName("Char");
                 for(int j=0;j<chars.getLength();j++){
                     page.addChar(new Char(chars.item(j).getTextContent()));

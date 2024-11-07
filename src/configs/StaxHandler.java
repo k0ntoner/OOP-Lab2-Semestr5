@@ -28,12 +28,10 @@ public class StaxHandler implements Handler {
                         case "page":
                             currentPage = new Page();
                             currentPage.setId(Integer.parseInt(event.asStartElement().getAttributeByName(new QName("id")).getValue()));
+                            currentPage.setType(event.asStartElement().getAttributeByName(new QName("type")).getValue());
                             break;
                         case "title":
                             currentElement="Title";
-                            break;
-                        case "type":
-                            currentElement="Type";
                             break;
                         case "char":
                             currentElement="Char";
@@ -52,9 +50,6 @@ public class StaxHandler implements Handler {
                     if(currentPage!=null){
                         if("Title".equals(currentElement)){
                             currentPage.setTitle(dataOfElement);
-                        }
-                        else if("Type".equals(currentElement)){
-                            currentPage.setType(dataOfElement);
                         }
                         else if("Char".equals(currentElement)){
                             currentPage.addChar(new Char(dataOfElement));

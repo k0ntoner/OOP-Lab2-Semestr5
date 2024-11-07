@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><Site>
+    <News>
+        <Page id="1" type="News">
+            <Title>Hot News</Title>
+            <Chars>
+                <Char>Email Available</Char>
+                <Char>News Available</Char>
+                <Char>Free</Char>
+            </Chars>
+            <Votings>
+                <Voting>
+                    <Anonimus>true</Anonimus>
+                </Voting>
+            </Votings>
+            <Authorize>false</Authorize>
+        </Page>
+        <Page id="5" type="News">
+            <Title>Latest Updates</Title>
+            <Chars>
+                <Char>Email Available</Char>
+                <Char>Breaking News</Char>
+                <Char>Free</Char>
+            </Chars>
+            <Votings>
+                <Voting>
+                    <Anonimus>true</Anonimus>
+                </Voting>
+            </Votings>
+            <Authorize>false</Authorize>
+        </Page>
+    </News>
+    <Advertising>
+        <Page id="2" type="Advertising">
+            <Title>New Car</Title>
+            <Chars>
+                <Char>Email Not Available</Char>
+            </Chars>
+            <Authorize>false</Authorize>
+        </Page>
+        <Page id="6" type="Advertising">
+            <Title>Special Offers</Title>
+            <Chars>
+                <Char>Email Not Available</Char>
+            </Chars>
+            <Authorize>false</Authorize>
+        </Page>
+    </Advertising>
+    <Portal>
+        <Page id="3" type="Portal">
+            <Title>Info</Title>
+            <Chars>
+                <Char>Email Available</Char>
+                <Char>Paid</Char>
+            </Chars>
+            <Authorize>true</Authorize>
+        </Page>
+        <Page id="7" type="Portal">
+            <Title>Resource Hub</Title>
+            <Chars>
+                <Char>Email Available</Char>
+                <Char>Paid</Char>
+            </Chars>
+            <Authorize>true</Authorize>
+        </Page>
+    </Portal>
+    <Mirror>
+        <Page id="4" type="Mirror">
+            <Title>Boom</Title>
+            <Chars>
+                <Char>Email Available</Char>
+                <Char>Paid</Char>
+                <Char>Archived Available</Char>
+            </Chars>
+            <Authorize>true</Authorize>
+        </Page>
+        <Page id="8" type="Mirror">
+            <Title>Mirror Site</Title>
+            <Chars>
+                <Char>Email Available</Char>
+                <Char>Paid</Char>
+                <Char>Archived Available</Char>
+            </Chars>
+            <Authorize>true</Authorize>
+        </Page>
+    </Mirror>
+</Site>

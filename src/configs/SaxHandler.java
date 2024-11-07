@@ -30,6 +30,7 @@ public class SaxHandler implements Handler {
                 public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
                     if(qName.equalsIgnoreCase("Page")){
                         currentPage = new Page(Integer.parseInt(attributes.getValue("id")));
+                        currentPage.setType(attributes.getValue("type"));
                     }
 
 
@@ -43,9 +44,6 @@ public class SaxHandler implements Handler {
                             break;
                         case "title":
                             currentPage.setTitle(currentValue);
-                            break;
-                        case "type":
-                            currentPage.setType(currentValue);
                             break;
                         case "char":
                             Char property=new Char(currentValue);
